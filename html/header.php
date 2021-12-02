@@ -28,8 +28,10 @@
     <div class="container">
         <div class="row header__info">
             <img class="header__logo" src="../image/decoclay_mgn.png" alt="Упс...проблемка">
-            <a class="table-link" href="table.html" target="_blank">Сегмент таблицы Менделеева</a>
-            <a class="massiv-link" href="26.11.21dz.php" target="_blan">Массивы</a>
+            <a class="table-link" href="table.php" target="_blank">Сегмент таблицы Менделеева|</a>
+            <a class="massiv-link" href="26.11.21dz.php" target="_blan">Массивы|</a>
+            <a class="massiv-link" href="29.11.21.php" target="_blan">Строки|</a>
+            <a class="massiv-link" href="01.12.21.php" target="_blan">Функции|</a>
         </div>
     </div>
 </header>

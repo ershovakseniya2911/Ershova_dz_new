@@ -32,9 +32,10 @@ if(date("H") > 20.01 && date("H") < 07.59){
     <div class="container">
         <div class="row header__info">
             <img class="header__logo" src="../image/decoclay_mgn.png" alt="Упс...проблемка">
-            <a class="table-link" href="table.php" target="_blank">Сегмент таблицы Менделеева</a>
-            <a class="massiv-link" href="26.11.21dz.php" target="_blan">Массивы</a>
-            <a class="massiv-link" href="29.11.21.php" target="_blan">Строки</a>
+            <a class="table-link" href="table.php" target="_blank">Сегмент таблицы Менделеева|</a>
+            <a class="massiv-link" href="26.11.21dz.php" target="_blan">Массивы|</a>
+            <a class="massiv-link" href="29.11.21.php" target="_blan">Строки|</a>
+            <a class="massiv-link" href="01.12.21.php" target="_blan">Функции|</a>
 
         </div>
     </div>
@@ -52,20 +53,32 @@ if(date("H") > 20.01 && date("H") < 07.59){
                 </div>
                 <div class="info-gr">
                     <div class="aboutme">
-                        <p class="aboutme">
-                            Место работы: ОАО "ММК-МЕТИЗ" Хобби: декорирование кружек и ложек из полимерной глины. Основатель бренда творческой мастерской "DECOCLAY_MGN"
-                        </p>
+                        <?php
+                          $aboutmeinfostring = '<span>Место работы: ОАО "ММК-МЕТИЗ" Хобби: декорирование кружек и ложек из полимерной глины, основатель бренда творческой мастерской "DECOCLAY_MGN"</span>';
+                          $aboutmeinfoArray = explode('.', $aboutmeinfostring);
+                          $aboutmeinfoArray[0] = "<span style='color: fuchsia'>$aboutmeinfoArray[0]</span>";
+                          $aboutme = implode('.' , $aboutmeinfoArray);
+                          echo $aboutme;
+                        ?>
                     </div>
                     <div class="feedback">
                         <div class="feedback">
-                            Преподаватель Регина все объясняет вежливо, доступно, не просто поток теории,
+                            <?php
+                            $feedbackstring = '<p> Преподаватель Регина все объясняет вежливо, доступно, не просто поток теории,
                             а сразу отработка на практике, что очень нравится,
                             так материал усваивается в разы быстрее. Отвечает на все вопросы, которые возникли в ходе урока,
                             ждет и помогает, каждому студенту, если возникает каккая-либо проблема с выполнением задания.
                             Темп очень устраивает, для меня ,как новичка, очень удобно. Хотелось бы, чтобы продолжалось обучение в таком же темпе.
                             Сложности для меня состоят в том, что многие слова не знаю их значений, и по
                             возможности давать устные определения тому или иному слову.
-                            В целом , первым занятием удовлетворена.
+                            В целом , первым занятием удовлетворена.</p>';
+                            $feedbackArray = explode(' ', $feedbackstring);
+                            foreach ($feedbackArray as $item => $element) {
+                                ($item % 2 === 0) ? $feedbackArray[$item] = "<span style='color:red'>$element</span>>" : $feedbackArray[$item] = "<span style='color:#520404'>$element</span>";
+                            }
+                            $feedback = implode(' ', $feedbackArray);
+                            echo $feedback;
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -80,7 +93,8 @@ if(date("H") > 20.01 && date("H") < 07.59){
                         <img src="../image/stich.jpeg" alt="Упс...проблемка">
                     </div>
                     <div class="cup__title">
-                        Стич
+                      Стич
+
                     </div>
                 </div>
 
@@ -160,10 +174,26 @@ if(date("H") > 20.01 && date("H") < 07.59){
     </section>
     </div>
 
+    <div class="calculation">
+        <?php
+        $totalwords = str_word_count($feedback.$aboutme);
+        $dateandtime = date('D, d-M-Y H:i');
+        $totalvowels = preg_match_all('/[аеёиоуыэюяaeiou]/iu', $aboutme.$feedback);
+        $date = explode('-', '29-11-1994');
+        $current_date = explode('-', date('d-m -Y'));
+        $diff = ($current_date[0] -$date[0])+($current_date[1]-$date[1])*30.43+($current_date[2]-$date[2])*365.25;
+        $diff = (int)$diff;
 
+        echo "<p>Глассных букв на странице: $totalvowels</p>";
+        echo "<p>Слов на странице: $totalwords</p>";
+        echo "<p>Мне $diff дней</p>";
+        echo "<p>Сейчас:$dateandtime</p>";
+        ?>
+    </div>
 
 
 </main>
+
 <footer>
     <div class="footer">
         <p class="footer-content-right">Свяжитесь с нами</p>
@@ -174,7 +204,6 @@ if(date("H") > 20.01 && date("H") < 07.59){
         </div>
 
     </div>
-
 
 </footer>
 
