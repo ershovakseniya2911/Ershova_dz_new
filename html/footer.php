@@ -14,7 +14,7 @@
     <div class="footer">
         <p class="footer-content-right">Свяжитесь с нами</p>
         <div class="footer-content-right">
-            <a href="https://vk.com/id85687042"><img src="../image/logoVK.jpg" class="icon-style" alt="VK icon">Вконтакте</a>
+            <a href="https://vk.com/id85687042"><img src="../image/logoVK.jpg" class="icon-style" alt="VK icon" >Вконтакте</a>
             <a href="https://www.instagram.com/decoclay_mgn/"><img src="../image/logoINST.png" class="icon-style" alt="INST icon">INSTAGRAM</a>
             <a href="https://github.com/ershovakseniya2911?tab=repositories"><img src="../image/github.jpg" class="icon-style" alt="GitHub icon">GitHub</a>
         </div>

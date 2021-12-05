@@ -28,14 +28,19 @@ if(date("H") > 20.01 && date("H") < 07.59){
     <title>Title</title>
 </head>
 <body>
+<body>
 <header class="header">
     <div class="container">
         <div class="row header__info">
             <img class="header__logo" src="../image/decoclay_mgn.png" alt="Упс...проблемка">
             <a class="table-link" href="table.php" target="_blank">Сегмент таблицы Менделеева|</a>
             <a class="massiv-link" href="26.11.21dz.php" target="_blan">Массивы|</a>
-            <a class="massiv-link" href="29.11.21.php" target="_blan">Строки|</a>
-            <a class="massiv-link" href="01.12.21.php" target="_blan">Функции|</a>
+            <a class="string-link" href="29.11.21.php" target="_blan">Строки|</a>
+            <a class="function-link" href="01.12.21.php" target="_blan">Функции|</a>
+            <a class="get_post-link" href="03.12.21.php" target="_blan">GET/POST|</a>
+            <a class="authorization-link" href="03.12.21authorization.php" target="_blan">Авторизация|</a>
+            <a class="authorization-link" href="03.12.21questionnaire.php" target="_blan">Анкета|</a>
+
 
         </div>
     </div>
@@ -176,18 +181,28 @@ if(date("H") > 20.01 && date("H") < 07.59){
 
     <div class="calculation">
         <?php
-        $totalwords = str_word_count($feedback.$aboutme);
-        $dateandtime = date('D, d-M-Y H:i');
-        $totalvowels = preg_match_all('/[аеёиоуыэюяaeiou]/iu', $aboutme.$feedback);
-        $date = explode('-', '29-11-1994');
-        $current_date = explode('-', date('d-m -Y'));
-        $diff = ($current_date[0] -$date[0])+($current_date[1]-$date[1])*30.43+($current_date[2]-$date[2])*365.25;
-        $diff = (int)$diff;
+        $totalStringWords = $feedback.$aboutme;
+        function countWords($string) {
+            $totalWords = str_word_count($string);
+            echo "<p>Слов на странице: $totalWords</p>";
+        }
+        function countVowels($string){
+            $totalVowels = preg_match_all('/[аеёиоуыэюяaeiou]/iu', $string);
+            echo "<p>Глассных букв на странице: $totalVowels</p>";
+        }
+        function daysFromBirthday($bday) {
+            $date = explode('-', $bday);
+            $current_date = explode('-', date('d-m -Y'));
+            $diff = ($current_date[0] -$date[0])+($current_date[1]-$date[1])*30.43+($current_date[2]-$date[2])*365.25;
+            $diff = (int)$diff;
+            $dateandtime = date('D, d-M-Y H:i');
+            echo "<p>Мне $diff дней</p>";
+            echo "<p>Сейчас:$dateandtime</p>";
+        }
+        countVowels($totalStringWords);
+        countWords($totalStringWords);
+        daysFromBirthday('29-11-1994');
 
-        echo "<p>Глассных букв на странице: $totalvowels</p>";
-        echo "<p>Слов на странице: $totalwords</p>";
-        echo "<p>Мне $diff дней</p>";
-        echo "<p>Сейчас:$dateandtime</p>";
         ?>
     </div>
 

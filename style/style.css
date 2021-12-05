@@ -162,7 +162,30 @@ header {
     font-weight: bold;
     text-decoration: none;
 }
-
+.string-link{
+    font-size:24px;
+    color: #520404;
+    font-weight: bold;
+    text-decoration: none;
+}
+.function-link{
+    font-size:24px;
+    color: #520404;
+    font-weight: bold;
+    text-decoration: none;
+}
+.get_post-link{
+    font-size:24px;
+    color: #520404;
+    font-weight: bold;
+    text-decoration: none;
+}
+.authorization-link{
+    font-size:24px;
+    color: #520404;
+    font-weight: bold;
+    text-decoration: none;
+}
 
 /* CUP */
 

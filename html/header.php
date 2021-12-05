@@ -32,6 +32,9 @@
             <a class="massiv-link" href="26.11.21dz.php" target="_blan">Массивы|</a>
             <a class="massiv-link" href="29.11.21.php" target="_blan">Строки|</a>
             <a class="massiv-link" href="01.12.21.php" target="_blan">Функции|</a>
+            <a class="get_post-link" href="03.12.21.php" target="_blan">GET/POST|</a>
+            <a class="authorization-link" href="03.12.21authorization.php" target="_blan">Авторизация|</a>
+            <a class="authorization-link" href="03.12.21questionnaire.php" target="_blan">Анкета|</a>
         </div>
     </div>
 </header>
