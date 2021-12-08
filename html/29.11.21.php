@@ -22,12 +22,12 @@ require "header.php"
 $str = "Ершова Ксения Игоревна";
 $arr1= "Ершова";
 $arr2= "Ксения";
+$arr3 = "Игоревна";
 $arr = explode(' ', $str);
 $new_arr = array_reverse($arr);
-print_r($new_arr);
-
-
-
+$new_arr1 = array (0=>"  ");
+$new_arr2 = array_replace($new_arr, $new_arr1);
+print_r($new_arr2);
 ?>
 
 <div>
@@ -37,11 +37,38 @@ print_r($new_arr);
 </h3>
 </div>
 <?php
-// массив 1
 $str = "Привет, мир";
-echo mb_strlen($str);
+$resulte = substr_count("$str", "и");
+print_r($resulte);
 ?>
 
+<div>
+    <h3>
+       4) Дана строка ‘html css php'. Вырежьте из нее и выведите на экран слово 'html', слово 'css' и слово 'php'.
+    </h3>
+</div>
+<?php
+$str = "html css php";
+$resulte1 = mb_substr( $str, 0, -8);
+$resulte2 = mb_substr($str, 5, -4);
+$resulte3 = mb_substr($str, 8 );
+echo $resulte1 . "<br>";
+echo $resulte2 . "<br>";
+echo $resulte3;
+?>
+<div>
+    <h3>
+        5) Дана строка. Проверьте, что она заканчивается на '.png'. Если это так, выведите 'да', если не так - 'нет'.
+    </h3>
+</div>
+<?php
+$str1 = "qwerty.png";
+if (substr($str1, -4) === '.png') {
+    echo 'да';
+} else {
+    echo 'нет';
+}
+?>
 
 <?php
 require "footer.php"

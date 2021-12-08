@@ -151,37 +151,49 @@ header {
 }
 
 .table-link{
-    font-size:24px;
+    font-size:20px;
     color: #520404;
     font-weight: bold;
     text-decoration: none;
 }
 .massiv-link{
-    font-size:24px;
+    font-size:20px;
     color: #520404;
     font-weight: bold;
     text-decoration: none;
 }
 .string-link{
-    font-size:24px;
+    font-size:20px;
     color: #520404;
     font-weight: bold;
     text-decoration: none;
 }
 .function-link{
-    font-size:24px;
+    font-size:20px;
     color: #520404;
     font-weight: bold;
     text-decoration: none;
 }
 .get_post-link{
-    font-size:24px;
+    font-size:20px;
     color: #520404;
     font-weight: bold;
     text-decoration: none;
 }
 .authorization-link{
-    font-size:24px;
+    font-size:20px;
+    color: #520404;
+    font-weight: bold;
+    text-decoration: none;
+}
+.main_page-link{
+    font-size:20px;
+    color: #520404;
+    font-weight: bold;
+    text-decoration: none;
+}
+.anketa-link{
+    font-size:20px;
     color: #520404;
     font-weight: bold;
     text-decoration: none;

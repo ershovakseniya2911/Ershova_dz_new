@@ -38,9 +38,8 @@ if(date("H") > 20.01 && date("H") < 07.59){
             <a class="string-link" href="29.11.21.php" target="_blan">Строки|</a>
             <a class="function-link" href="01.12.21.php" target="_blan">Функции|</a>
             <a class="get_post-link" href="03.12.21.php" target="_blan">GET/POST|</a>
+            <a class="anketa-link" href="03.12.21questionnaire.php" target="_blan">Анкета|</a>
             <a class="authorization-link" href="03.12.21authorization.php" target="_blan">Авторизация|</a>
-            <a class="authorization-link" href="03.12.21questionnaire.php" target="_blan">Анкета|</a>
-
 
         </div>
     </div>

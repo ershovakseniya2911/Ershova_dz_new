@@ -30,10 +30,9 @@ if(isset($_POST['submit'])):
 $user_login = sha1($_POST['login']);
 $user_pass = sha1($_POST['password']);
 echo ($name == $user_login && $pass == $user_pass) ?
-    ' <p <a href="hello.php" target="_blan">Рады вас приветствовать!</a></p>' : '<p>Неверная пара логин-пароль</p>';
-
+   '<p style="color: darksalmon">Рады вас приветствовать!</p>' : '<p style="color: darksalmon">Неверная пара логин-пароль</p>';
 else:
-?>
+    ?>
 <form method="post" action="<?=$_SERVER['PHP_SELF']?>">
     <h3>Авторизация</h3>
     <label for="login">Имя пользователя:</label>
@@ -65,7 +64,7 @@ if(isset($_POST['submit'])):
     $user_pass1 = sha1($_POST['password']);
     $user_email = sha1($_POST['email']);
     echo ($name == $user_login && $pass == $user_pass && $user_pass1 && $user_email) ?
-        ' <p <a href="index.php" target="_blan">Добро пожаловать!</p>' : '<p>Данные введены не верно, пожалуйста повторите</p>';
+        ' <p <a class="link" href="index.php" target="_blan">Добро пожаловать!</p>' : '<p>Данные введены не верно, пожалуйста повторите</p>';
 else:
     ?>
 <?php

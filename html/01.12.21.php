@@ -90,9 +90,6 @@ $result = sredarifmet(5, 10);
 echo $result;
 ?>
 
-
-
-
     <?php
     require "footer.php"
     ?>
