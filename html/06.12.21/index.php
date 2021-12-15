@@ -38,7 +38,7 @@ if ($_COOKIE['Auth'] == 1 ) echo $_COOKIE['backgroundColor']?>">
             <a class="function-link" href="01.12.21.php" target="_blan">Функции|</a>
             <a class="get_post-link" href="03.12.21.php" target="_blan">GET/POST|</a>
             <a class="anketa-link" href="03.12.21questionnaire.php" target="_blan">Анкета|</a>
-            <a class="authorization-link" href="06.12.21authorization.php" target="_blan">Авторизация|</a>
+            <a class="authorization-link" href="03.12.21authorization.php" target="_blan">Авторизация|</a>
             <a class="logout" href="logout.php" target="_blan">Выйти|</a>
 
         </div>
