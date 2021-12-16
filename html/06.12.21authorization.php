@@ -72,6 +72,7 @@ if ($_COOKIE['Auth'] == 1 ) echo $_COOKIE['backgroundColor']?>">
             <input class="submit" type="submit" name="submit" value="Авторизоваться">
         </a>
     </form>
+    ?>
     <form action="06.12.21authorization.php" method="get">
         <select name="color">
             <option value="red">Красный</option>
