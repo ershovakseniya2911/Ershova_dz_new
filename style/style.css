@@ -14,7 +14,7 @@ body{
     width: 100%;
 }
 
-header {
+header1{
 background: antiquewhite;
     width: 100%;
     margin: 15px 0;
@@ -27,8 +27,8 @@ background: antiquewhite;
 }
 
 .header__info{
-    align-items: center;
-    justify-content: space-between;
+   align-items: center;
+    text-decoration: none;
 }
 
 .header__logo{

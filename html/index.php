@@ -10,36 +10,27 @@ if(date("H") > 20.01 && date("H") < 07.59){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, shrink-to-fit=no"">
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel='stylesheet' href='<php echo $style; ?/>' type='text/css' media='all'>
-
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel='stylesheet' href="<?php echo $style ?>" type='text/css' media='all'>
     <title>Mypage</title>
 </head>
-<body style="background-color: <?php
+<body style="background-color: dimgray <?php
 if ($_COOKIE['Auth'] == 1 ) echo $_COOKIE['backgroundColor']?>">
-</html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="../style/style.css">
-    <title>Title</title>
-</head>
-<body>
-<body>
-<header class="header">
+
+<header class="header1">
     <div class="container">
         <div class="row header__info">
             <img class="header__logo" src="../image/decoclay_mgn.png" alt="Упс...проблемка">
             <a class="table-link" href="table.php" target="_blank">Сегмент таблицы Менделеева|</a>
-            <a class="massiv-link" href="26.11.21dz.php" target="_blan">Массивы|</a>
-            <a class="string-link" href="29.11.21.php" target="_blan">Строки|</a>
-            <a class="function-link" href="01.12.21.php" target="_blan">Функции|</a>
-            <a class="get_post-link" href="03.12.21.php" target="_blan">GET/POST|</a>
-            <a class="anketa-link" href="03.12.21questionnaire.php" target="_blan">Анкета|</a>
-            <a class="authorization-link" href="06.12.21authorization.php" target="_blan">Авторизация|</a>
-            <a class="logout" href="logout.php" target="_blan">Выйти|</a>
+            <a class="massiv-link" href="26.11.21dz.php" target="_blank">Массивы|</a>
+            <a class="string-link" href="29.11.21.php" target="_blank">Строки|</a>
+            <a class="function-link" href="01.12.21.php" target="_blank">Функции|</a>
+            <a class="get_post-link" href="03.12.21.php" target="_blank">GET/POST|</a>
+            <a class="anketa-link" href="03.12.21questionnaire.php" target="_blank">Анкета|</a>
+            <a class="authorization-link" href="06.12.21authorization.php" target="_blank">Авторизация|</a>
+            <a class="logout" href="logout.php" target="_blank">Выйти|</a>
 
         </div>
     </div>
@@ -78,7 +69,7 @@ if ($_COOKIE['Auth'] == 1 ) echo $_COOKIE['backgroundColor']?>">
                             В целом , первым занятием удовлетворена.</p>';
                             $feedbackArray = explode(' ', $feedbackstring);
                             foreach ($feedbackArray as $item => $element) {
-                                ($item % 2 === 0) ? $feedbackArray[$item] = "<span style='color:red'>$element</span>>" : $feedbackArray[$item] = "<span style='color:#520404'>$element</span>";
+                               ($item % 2 === 0) ? $feedbackArray[$item] = "<span style ='color:red'>$element</span>" : $feedbackArray[$item] = "<span style ='color:cornflowerblue'>$element</span>";
                             }
                             $feedback = implode(' ', $feedbackArray);
                             echo $feedback;
@@ -91,7 +82,6 @@ if ($_COOKIE['Auth'] == 1 ) echo $_COOKIE['backgroundColor']?>">
 
         <section class="cup">
             <div class="cup__wrapper">
-
                 <div class="cup__item">
                     <div class="cup__img">
                         <img src="../image/stich.jpeg" alt="Упс...проблемка">
@@ -136,7 +126,6 @@ if ($_COOKIE['Auth'] == 1 ) echo $_COOKIE['backgroundColor']?>">
 
     <section class="cup2">
         <div class="cup2__wrapper">
-
             <div class="cup2__item">
                 <div class="cup2__img">
                     <img src="../image/stich.jpeg" alt="Упс...проблемка">
@@ -176,7 +165,7 @@ if ($_COOKIE['Auth'] == 1 ) echo $_COOKIE['backgroundColor']?>">
         </div>
 
     </section>
-    </div>
+
 
     <div class="calculation">
         <?php
@@ -220,7 +209,6 @@ if ($_COOKIE['Auth'] == 1 ) echo $_COOKIE['backgroundColor']?>">
     </div>
 
 </footer>
-
 
 </body>
 </html>
